@@ -10,6 +10,12 @@ h1 {
 
 h2 {
   font-weight: 300;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+h3 {
+  margin: 8px 0;
 }
 
 header {
@@ -40,13 +46,84 @@ header {
   align-items: center;
 }
 
-.title {
-  /*flex-grow: 0;*/
-}
-
 .divider {
   flex-grow: 1;
   height: 1px;
   background: #D1D2D3;
+}
+
+.title-divider {
   margin: 0 0 0 60px;
+}
+
+.accordian-container {
+  margin: 10px;
+}
+
+.acc-tab-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.acc-tab-container, .acc-content-container {
+  box-sizing: border-box;
+  max-width: 800px;
+}
+
+.tab {
+  width: 100%;
+  background: #F2F2F2;
+  border-bottom: 1px solid #D1D2D3;
+}
+
+.tab2, .tab3 {
+  border-right: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+}
+
+.tab-title {
+  text-align: center;
+  color: #666;
+}
+
+.active-tab {
+  border: 1px solid #D1D2D3;
+  border-bottom: none;
+  background: #FFF;
+}
+
+.active-tab h2 {
+  font-weight: 400;
+}
+
+.acc-content-container {
+  margin: 0 auto;
+  border-left: 1px solid #D1D2D3;
+  border-right: 1px solid #D1D2D3;
+  border-bottom: 1px solid #D1D2D3;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.empty-box {
+  display: inline-block;
+  width: 28%;
+  height: 175px;
+  border: 1px solid #D1D2D3;
+  background: #F2F2F2;
+  margin: 10px 20px 10px 12px;
+}
+
+.acc-text-container {
+  display: inline-block;
+  width: 68%;
+  margin: 5px 15px 5px 5px;
+}
+
+.inactive-box {
+  display: none;
 }
