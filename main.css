@@ -3,6 +3,10 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 h1 {
   font-size: 40px;
   font-weight: 300;
@@ -25,8 +29,14 @@ header {
   align-items: center;
 }
 
+
+header, #accordian-tabs  {
+  padding: 0 30px;
+}
+
 #pattrn {
   color: #F2F2F2;
+  margin: 15px 0;
 }
 
 #party {
@@ -35,6 +45,7 @@ header {
 
 #my-name {
   color: #F2F2F2;
+  margin-right: 25px;
 }
 
 #accordian-tabs {
@@ -44,6 +55,7 @@ header {
 .title-container {
   display:flex;
   align-items: center;
+  margin: 25px 0 35px 0;
 }
 
 .divider {
@@ -104,6 +116,14 @@ header {
   border-bottom: 1px solid #D1D2D3;
 }
 
+.inactive-tab:hover {
+  background: #D1D2D3;
+}
+
+.inactive-tab:hover > .tab-title {
+ color: #FFF;
+}
+
 .box {
   display: flex;
   align-items: center;
@@ -126,4 +146,12 @@ header {
 
 .inactive-box {
   display: none;
+}
+
+
+@media screen and (max-width: 850px) {
+  body {
+    background: magenta;
+  }
+
 }
