@@ -9,7 +9,7 @@
 
 $('.tab').on('click', function() {
   // Update tabs
-  let allTabElements = $(this).closest('.acc-tab-container').children();
+  let allTabElements = $(this).closest('.accordian-container').children('.tab');
 
   allTabElements.removeClass('active-tab');
   allTabElements.addClass('inactive-tab');
@@ -17,12 +17,13 @@ $('.tab').on('click', function() {
   $(this).addClass('active-tab');
   let classesArr = $(this).attr('class').split(' ');
   let numClass = classesArr.filter(classStr => classStr.includes('elem'))
+  let boxClass = 'box' + numClass[0].charAt(0);
 
   // Update boxes
-  let allBoxElements = $(this).closest('.accordian-container').find('.acc-content-container').children('.box');
+  let allBoxElements = $(this).closest('.accordian-container').children('.box');
 
   allBoxElements.removeClass('active-box');
   allBoxElements.addClass('inactive-box');
-  $(this).closest('.accordian-container').find(`.${numClass}`).removeClass('inactive-box');
-  $(this).closest('.accordian-container').find(`.${numClass}`).addClass('active-box');
+  $(this).closest('.accordian-container').find(`.${boxClass}`).removeClass('inactive-box');
+  $(this).closest('.accordian-container').find(`.${boxClass}`).addClass('active-box');
 })

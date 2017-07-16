@@ -30,7 +30,7 @@ header {
 }
 
 
-header, #accordian-tabs  {
+header, section {
   padding: 0 30px;
 }
 
@@ -69,22 +69,21 @@ header, #accordian-tabs  {
 }
 
 .accordian-container {
-  margin: 10px;
-}
-
-.acc-tab-container {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.acc-tab-container, .acc-content-container {
-  box-sizing: border-box;
-  max-width: 800px;
+  flex-flow: row wrap;
+  max-width: 900px;
+  margin: 10px auto;
 }
 
 .tab {
-  width: 100%;
+  flex: 1 auto;
+}
+
+.box {
+  flex: 1 100%;
+}
+
+.tab {
   background: #F2F2F2;
   border-bottom: 1px solid #D1D2D3;
 }
@@ -109,24 +108,29 @@ header, #accordian-tabs  {
   font-weight: 400;
 }
 
-.acc-content-container {
-  margin: 0 auto;
-  border-left: 1px solid #D1D2D3;
-  border-right: 1px solid #D1D2D3;
-  border-bottom: 1px solid #D1D2D3;
-}
-
 .inactive-tab:hover {
   background: #D1D2D3;
 }
 
-.inactive-tab:hover > .tab-title {
+.inactive-tab:hover > .tab-title, .plus-sign {
  color: #FFF;
+}
+
+.inactive-tab:hover .plus-sign {
+  fill: #FFF;
+}
+
+.plus-sign-label {
+  display: none;
 }
 
 .box {
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  border-left: 1px solid #D1D2D3;
+  border-right: 1px solid #D1D2D3;
+  border-bottom: 1px solid #D1D2D3;
 }
 
 .empty-box {
@@ -150,8 +154,71 @@ header, #accordian-tabs  {
 
 
 @media screen and (max-width: 850px) {
-  body {
-    background: magenta;
+
+  .title-container {
+    display: block;
+    text-align: center;
+  }
+
+  .title-divider {
+    margin: 0 auto;
+    width: 75px;
+  }
+
+  .accordian-container {flex-direction: column;}
+  .tab1 {order: 1;}
+  .box1 {order: 2;}
+  .tab2 {order: 3;}
+  .box2 {order: 4;}
+  .tab3 {order: 5;}
+  .box3 {order: 6;}
+  .tab4 {order: 7;}
+  .box4 {order: 8;}
+
+  .accordian-container {
+    border: 1px solid #D1D2D3;
+  }
+
+  .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid #FFF;
+  }
+
+  .active-tab {
+    border-bottom: 1px solid #D1D2D3;
+  }
+
+  .plus-sign-label {
+    display: inline-block;
+    font-size: 0;
+    position: absolute;
+    right: 5px;
+  }
+
+  .plus-sign {
+    fill: #666;
+  }
+
+  .box {
+    border: none;
+  }
+
+  .active-box {
+    display: block;
+  }
+
+  .empty-box, .acc-text-container {
+    display: block;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .empty-box {
+    height: 150px;
   }
 
 }
