@@ -27,3 +27,7 @@ $('.tab').on('click', function() {
   $(this).closest('.accordian-container').find(`.${boxClass}`).removeClass('inactive-box');
   $(this).closest('.accordian-container').find(`.${boxClass}`).addClass('active-box');
 })
+
+$('.header-bar-container').on('click', function() {
+  $(this).children('.hide-item').toggleClass('inactive-item');
+})

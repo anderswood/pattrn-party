@@ -22,6 +22,10 @@ h3 {
   margin: 8px 0;
 }
 
+h4 {
+
+}
+
 header {
   background: #2F2235;
   display: flex;
@@ -195,6 +199,92 @@ button h2 {
 .card6 {flex: 0 1 calc(33% - 20px / 2);}
 .card7 {flex: 0 1 calc(66% - 20px / 2); margin-left: 20px;}
 
+
+/****** HEADER BAR ******/
+
+.header-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #D1D2D3;
+  width: 100%;
+}
+
+.x-svg-div {
+  margin: 15px 0 15px 20px;
+  position: relative;
+}
+
+.x-svg-label {
+  font-size: 0
+}
+
+.x-svg {
+  border: 1px solid #666;
+  border-radius: 27px;
+}
+
+.svg-container {
+  position: relative;
+  z-index: 2;
+}
+
+.white-circle {
+  position: absolute;
+  border-radius: 27px;
+  width: 50px;
+  height: 50px;
+  left: 1px;
+  top: 1px;
+  background: #F2F2F2;
+  z-index: 1;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  background: #F2F2F2;
+  width: 210px;
+  border: 1px solid #666;
+}
+
+.search-container h4 {
+  margin: 10px 0;
+}
+
+.small-white-circle {
+  position: absolute;
+  border-radius: 27px;
+  width: 17px;
+  height: 16px;
+  left: 14px;
+  top: 12px;
+  background: #fff;
+  z-index: 1;
+}
+
+.mag-label {
+  font-size: 0;
+  margin: 0 15px 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.link h4, .menu-text h4, .search-container h4 {
+  color: #666;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.menu-text {
+  display: none;
+}
+
 @media screen and (max-width: 850px) {
 
   .title-container {
@@ -261,6 +351,49 @@ button h2 {
 
   .empty-box {
     height: 150px;
+  }
+
+  .x-svg-div {order: 1;}
+  .menu-text {order:2;}
+  .link1 {order: 3;}
+  .link2 {order: 4;}
+  .link3 {order: 5;}
+  .search-wrapper {order:6;}
+
+  .inactive-item {
+    display: none;
+  }
+
+  .menu-text {
+    display: block;
+    margin-right: 25px;
+  }
+
+  .x-svg-div, menu-text {
+    flex: 1 auto;
+  }
+
+  .hide-item {
+    flex: 1 100%;
+    background: #F2F2F2;
+    margin: 0;
+    padding-left: 25px;
+  }
+
+  .link1 {
+    padding-top: 15px;
+  }
+
+  .search-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #fcfcfc;
+    position: relative;
+  }
+
+  .small-white-circle {
+    left: 39px;
+    top: 22px;
   }
 
 }
