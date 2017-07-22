@@ -28,7 +28,27 @@ $('.tab').on('click', function() {
   $(this).closest('.accordian-container').find(`.${boxClass}`).addClass('active-box');
 })
 
-// Update header bar
 $('.header-bar-container').on('click', function() {
   $(this).children('.hide-item').toggleClass('inactive-item');
-})
+});
+
+// View Code button
+$('#header-bar-btn').on('click', function() {
+  viewCode();
+});
+
+const viewCode = () => {
+  console.log('view code');
+    var source = "<html>";
+    source += document.getElementsByTagName('html')[0].innerHTML;
+    source += "</html>";
+    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    source = "<pre>"+source+"</pre>";
+    sourceWindow = window.open('','Source of page','height=800,width=800,scrollbars=1,resizable=1');
+    sourceWindow.document.write(source);
+    sourceWindow.document.close();
+    if(window.focus) sourceWindow.focus();
+}
+
+// https://stackoverflow.com/questions/41945094/add-option-to-view-source-of-current-html-page
+// https://css-tricks.com/make-a-view-source-button/
