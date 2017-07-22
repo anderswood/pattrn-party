@@ -323,6 +323,27 @@ button h2 {
     border-bottom: 1px solid #D1D2D3;
   }
 
+  .inactive-tab-mbl {
+    background: #F2F2F2;
+    border: 1px solid #FFF;
+  }
+
+  .inactive-tab-mbl:hover {
+    background: #D1D2D3;
+  }
+
+  .inactive-tab-mbl:hover > .tab-title, .plus-sign {
+   color: #FFF;
+  }
+
+  .inactive-tab-mbl:hover .plus-sign {
+    fill: #FFF;
+  }
+
+  .inactive-tab-mbl h2 {
+    font-weight: 300;
+  }
+
   .plus-sign-label {
     display: inline-block;
     font-size: 0;
@@ -340,6 +361,10 @@ button h2 {
 
   .active-box {
     display: block;
+  }
+
+  .inactive-box-mbl {
+    display: none;
   }
 
   .empty-box, .acc-text-container {
